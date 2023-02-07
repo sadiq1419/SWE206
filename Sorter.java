@@ -37,26 +37,10 @@ public class Sorter {
 		return array;
 	}
 
-
-	public static int[] sort(int[] arr){
+	public static int[] sort(int[] arr) {
 		return selectionSort(arr);
 	}
-	
-public static int[] insertionSort(int[] array){
-	for (int i=1; i<array.length; i++) {
-		for (int j=0; j<i; j++) {
-			if(array[i] < array[j]){
-				for(int k = i; k>j; k--){
-					swap(array, k, k-1);
-				}
-				break;
-			}
-		}
-	}
-	return array;
-}
 
-public static int[] sort(int[] array) {
-	return insertionSort(array);
-}
+	
+
 }
