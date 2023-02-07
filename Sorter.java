@@ -1,8 +1,9 @@
 
 public class Sorter {
 	public static void main(String[] args) {
-		System.out.println("Something");
+		System.out.println("A");
 	}
+
 	static void swap(int[] array, int a, int b) {
 		int temp = array[a];
 		array[a] = array[b];
@@ -41,4 +42,21 @@ public class Sorter {
 		return selectionSort(arr);
 	}
 	
+public static int[] insertionSort(int[] array){
+	for (int i=1; i<array.length; i++) {
+		for (int j=0; j<i; j++) {
+			if(array[i] < array[j]){
+				for(int k = i; k>j; k--){
+					swap(array, k, k-1);
+				}
+				break;
+			}
+		}
+	}
+	return array;
+}
+
+public static int[] sort(int[] array) {
+	return insertionSort(array);
+}
 }
