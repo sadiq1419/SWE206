@@ -17,6 +17,19 @@ public class Sorter {
 			swap(array, i, min);
 		}
 		return array;
-	}
+}
 
+public static int[] insertionSort(int[] array){
+	for (int i=1; i<array.length; i++) {
+		for (int j=0; j<i; j++) {
+			if(array[i] < array[j]){
+				for(int k = i; k>j; k--){
+					swap(array, k, k-1);
+				}
+				break;
+			}
+		}
+	}
+	return array;
+}
 }
