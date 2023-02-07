@@ -1,5 +1,8 @@
 
 public class Sorter {
+	public static void main(String[] args) {
+		System.out.println("A");
+	}
 	static void swap(int[] array, int a, int b){
 		int temp = array[a];
 		array[a] = array[b];
@@ -31,5 +34,9 @@ public static int[] insertionSort(int[] array){
 		}
 	}
 	return array;
+}
+
+public static int[] sort(int[] array) {
+	return insertionSort(array);
 }
 }
